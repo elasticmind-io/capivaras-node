@@ -4,6 +4,10 @@ const jwt = require("jsonwebtoken");
 const router = express.Router();
 const secret = "capiv@ras#$5a78";
 
+router.get("/ping", (request, response) => {
+  response.send("pong");
+});
+
 router.post("/", function (request, response) {
   const email = request.body.email;
   const senha = request.body.senha;
